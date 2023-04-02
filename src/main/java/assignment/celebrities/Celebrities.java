@@ -1,0 +1,34 @@
+package assignment.celebrities;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
+
+public class Celebrities extends Application {
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("celebrities-view.fxml"));
+
+        Scene scene = new Scene(root);
+
+        stage.getIcons().add(new Image("file:src/main/resources/assignment/celebrities/images/UNTIcon.png"));
+        stage.setTitle("Celebrities Portal");
+
+        stage.setScene(scene);
+        stage.show();
+
+
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+}
